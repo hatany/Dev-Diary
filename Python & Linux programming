@@ -1,0 +1,7 @@
+
+remote cmd:
+ex1: 
+ssh $opt_key  -o StrictHostKeyChecking=no $opt_user@$nodeip "cd /tmp/SPF_Fixpack;tar zxf /tmp/SPF_Fixpack/iocplatform.tar.gz;chmod -R 777 /tmp/SPF_Fixpack/*"
+ex2:
+scp $opt_key  -o StrictHostKeyChecking=no -r $FIXPATH/iocplatform.tar.gz $opt_user@$nodeip:/tmp/SPF_Fixpack
+ 
