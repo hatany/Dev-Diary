@@ -1,7 +1,11 @@
-
-remote cmd:
+1 .
+//emote cmd:
 ex1: 
 ssh $opt_key  -o StrictHostKeyChecking=no $opt_user@$nodeip "cd /tmp/SPF_Fixpack;tar zxf /tmp/SPF_Fixpack/iocplatform.tar.gz;chmod -R 777 /tmp/SPF_Fixpack/*"
 ex2:
 scp $opt_key  -o StrictHostKeyChecking=no -r $FIXPATH/iocplatform.tar.gz $opt_user@$nodeip:/tmp/SPF_Fixpack
- 
+2. 
+slcli vs list|grep uklo2d-scopucd-ws
+3. 
+//Python执行Linux系统命令的4种方法
+http://www.jb51.net/article/56490.htm
