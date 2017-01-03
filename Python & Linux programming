@@ -9,3 +9,10 @@ slcli vs list|grep uklo2d-scopucd-ws
 3. 
 //Python执行Linux系统命令的4种方法
 http://www.jb51.net/article/56490.htm
+4. scp
+scp -r username@ip:sourceDir targetDir
+scp sourceDir/filename targetDir/[filenames]
+e.g.scp -r root@9.30.232.44:/home/scopsadm/scripts/Create_CCI /Users/zhaorong/Documents/workspace/PythonMac/src/PyDir/
+5. SSH
+ssh [username]@[ip]
+>[Password]
