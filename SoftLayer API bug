@@ -1,0 +1,6 @@
+Found bug in SoftLayer python api, 
+
+1. Line 220, Softlayer/managers/vs.py, 
+Error: 'orderItem.order.userRecord[username]'
+Correction: should be billingItem[orderItem[order[userRecord[username]]]]
+2. Line 222, tagReference, there is an additional [] when parsing tagReference, should be only dictionary type. 
