@@ -14,9 +14,10 @@ B - 安装 wget
     brew install wget
 
 执行完毕之后，我们就可以用wget命令下载远程文件。
+
 Solution 2:传统的安装包
 
-A - 从ftp://ftp.gnu.org/gnu/wget/下载到最新的wget安装包到本地
+ - 从ftp://ftp.gnu.org/gnu/wget/下载到最新的wget安装包到本地
 
 B - 然后通过终端tar -zxvf命令解压到我们某个目录
 
@@ -28,4 +29,6 @@ $cd wget-1.18
 $ ./configure
 $ make
 $ sudo make install
-但是错误信息提示 缺少了GNUTLS 需要先安装GNUTLS，于是切换第一个Homebrew方案
+
+错误提示pkg-config未安装，follow this guide to install pkg-config first.
+re-run 但是错误信息提示 缺少了GNUTLS 需要先安装GNUTLS. 于是切换第一个Homebrew方案,第一个方案秒安装完。
