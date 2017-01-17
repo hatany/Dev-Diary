@@ -1,0 +1,31 @@
+install wget:
+Solution 1. Homebrew
+
+Homebrew是一款非常强大的可以应用在MAC中的Linux管理包，如果下面的方法感觉比较麻烦，我们可以通过下面的方法解决。
+http://www.itbulu.com/macbook-wget-install.html
+A - 执行安装brew
+
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+进入终端之后，执行brew的安装。
+
+B - 安装 wget
+
+    brew install wget
+
+执行完毕之后，我们就可以用wget命令下载远程文件。
+Solution 2:传统的安装包
+
+A - 从ftp://ftp.gnu.org/gnu/wget/下载到最新的wget安装包到本地
+
+B - 然后通过终端tar -zxvf命令解压到我们某个目录
+
+C - 然后依次执行 ./configure 和  make  以及 make install 命令。
+On Mac, wget command is not installed by default, so 
+Download wget from: ftp://ftp.gnu.org/gnu/wget/
+Install wget: tar -zxvf wget-1.18.tar.gz
+$cd wget-1.18
+$ ./configure
+$ make
+$ sudo make install
+但是错误信息提示 缺少了GNUTLS 需要先安装GNUTLS，于是切换第一个Homebrew方案
