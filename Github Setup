@@ -1,0 +1,39 @@
+Login XXX github enterprise: https://github.xxx.com with your id
+
+
+For Windows, install Git windows tool(https://git-for-windows.github.io/), 
+For macOS, install Git desktop https://desktop.github.com/
+open Git Bash,
+#>ssh-keygen -t rsa -C "xxx@yy.zz"
+(use default location)
+(empty passphrase)
+on github.xxx.com, user>setting>SSH and GPG keys, new SSH key, title anything and copy the content of id_rsa.pub in "Key" field, click "Add SSH Key"
+#>ssh -T git@github.xxx.com
+(yes, and enter)
+(Hi XXX! You've successfully authenticated, but GitHub does not provide shell access.)
+on github.xxx.com, copy project url: git@github.xxx.com:[OrganzationName]/[RepositoryName].git
+#>cd /<path_of_your_workspace>
+#>git clone git@github.xxx.com:[OrganzationName]/[RepositoryName].git
+
+
+Github Desktop on Windows cannot logon Github Enterprise (https://github.xxx.com)
+
+
+In RSA or RAD, open local workspace from folder [OrganzationName], import projects in the folder.
+Because most projects are maven project, you need to install Maven on your dev machine and install Maven plugin in Eclipse:
+Help>Install New Software...>add repository (http://m2eclipse.sonatype.org/sites/m2e/), then install maven plugin.
+
+
+When submit code, here are steps:
+In Git Bash,
+#>cd code folder
+#>git status
+(if new project or new folder in existing project, need to git add, below is example to add all files under one project)
+#>git add sub folder
+#>git commit
+(uncomment lines, :wq)
+#>git pull
+(if file conflict, will auto merge first, if auto merge fail, then need to manual merge and commit again)
+#>git push
+or #>git push origin master
+
