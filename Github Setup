@@ -1,3 +1,4 @@
+1. Command line in Github
 Login XXX github enterprise: https://github.xxx.com with your id
 
 
@@ -36,4 +37,16 @@ In Git Bash,
 (if file conflict, will auto merge first, if auto merge fail, then need to manual merge and commit again)
 #>git push
 or #>git push origin master
+
+2. Github desktop
+代码如果需要把dev的code merge 到int branch， 有desktop的基本步骤如下:
+dev 对应环境   dev.xxx.cloud
+int 对应环境  int.xxx.cloud
+
+1.  Github desktop , under dev branch,  push all changes made in dev.
+2. Github desktop 切换成int branch
+3. 终端， cd到对应的repo 目录，  运行    
+     git checkout int 
+     git merge dev
+4. 回到 Github desktop， 左下角会看到有待 push的changes， push 到int
 
